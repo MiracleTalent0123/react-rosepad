@@ -1,9 +1,7 @@
 import CardSwiper from "components/CardSwiper";
 import styled from "styled-components";
-// import { TransitionGroup, Transition } from "react-transition-group";
-// import TransitionGroup from 'react-transition-group';
-// import Calculator from "./Calculator";
 import rose3 from "../../assets/images/Roses/rose3.png";
+import Calculator from "./Calculator";
 
 const Container = styled.div`
   width: 100%;
@@ -47,21 +45,7 @@ const Image = styled.img`
   height: 70px;
 `;
 
-// const defaultStyle = {
-//   transition: `transform 500ms ease-in-out`,
-//   transform: "translateX(-100%)",
-// };
-
-// const transitionStyles = styled.div`
-//   transition: 'transform 1000ms ease-in-out',
-//   transform: "translateX(-100%)"
-//   entering: { transform: "translateX(0)" },
-//   entered: { transform: "translateX(0)" },
-//   exiting: { transform: "translateX(-100%)" },
-//   exited: { transform: "translateX(-100%)" }
-// `;
-
-export default ({ scroll }: any) => {
+const Tiers = () => {
   return (
     <Container>
       <Title>Tiers</Title>
@@ -71,13 +55,11 @@ export default ({ scroll }: any) => {
           <CardSwiper />
         </Column>
         <Column>
-          {/* {scroll > 7
-            ? <TransitionGroup.Transition in={true} timeout={1000}>
-              <Calculator />
-            </TransitionGroup.Transition>
-            : ''} */}
+          <Calculator />
         </Column>
       </Body>
     </Container>
   );
 };
+
+export default Tiers;

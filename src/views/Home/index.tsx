@@ -38,22 +38,21 @@ const Content = styled.div`
     radial-gradient(circle at right, #90004f, transparent 5%),
     radial-gradient(circle at bottom right, #90004f, transparent 4%),
     radial-gradient(circle at bottom left, #90004f, transparent 4%),
-    radial-gradient(circle at left, #90004f, transparent 6%),
-    black;
+    radial-gradient(circle at left, #90004f, transparent 6%), black;
   position: relative;
 `;
 
-export default ({ scroll }: any) => {
+const Home = ({ scroll }: any) => {
   return (
     <Wrapper>
       <Hero />
       <Content>
         <Container>
           <Platforms />
-          <Tiers scroll={scroll} />
+          <Tiers />
           <Featured />
           <Banner />
-          <Roadmap scroll={scroll} />
+          <Roadmap />
           <Tokenomics />
           <Team />
           <Partners />
@@ -63,3 +62,5 @@ export default ({ scroll }: any) => {
     </Wrapper>
   );
 };
+
+export default Home;

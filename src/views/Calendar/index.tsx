@@ -294,7 +294,7 @@ export default () => {
     }
 
     setCalendar(items);
-  }, [currentMonth, currentYear]);
+  }, [currentMonth, currentYear, daysCount, months]);
 
   return (
     <Wrapper>

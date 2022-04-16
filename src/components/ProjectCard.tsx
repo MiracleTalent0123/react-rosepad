@@ -48,13 +48,12 @@ const SubTitle = styled.p`
 `;
 
 const Description = styled.p`
-  font-family: "Nasalization";
   margin-top: 1rem;
   font-size: 12px;
   line-height: 25px;
 `;
 
-export default ({ id }: any) => {
+const ProjectCard = ({ id }: any) => {
   const navigate = useNavigate();
 
   return (
@@ -70,3 +69,5 @@ export default ({ id }: any) => {
     </Container>
   );
 };
+
+export default ProjectCard;

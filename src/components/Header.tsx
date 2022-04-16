@@ -7,7 +7,8 @@ import { toggleNavMenu } from "store/ui";
 import styled from "styled-components";
 import IconBtn from "./IconBtn";
 import NavItem from "./NavItem";
-import RedLogo from '../assets/images/launch.png';
+import RedLogo from "../assets/images/launch.png";
+import { useLocation } from "react-router-dom";
 
 const Container = styled.div`
   padding: 1rem;
@@ -21,8 +22,8 @@ const Container = styled.div`
 
 const Branding = styled.div`
   display: flex;
-  align-self: flex-end;
   gap: 1rem;
+  padding: 0 0 1rem;
 `;
 const Brand = styled.img.attrs({ src: brandIcon })`
   width: 7rem;
@@ -84,10 +85,10 @@ const Button = styled.button`
   cursor: pointer;
 
   &::before {
-    content: 'APP';
+    content: "APP";
   }
   &:hover::before {
-    content: 'Coming soon';
+    content: "Coming soon";
   }
   &:hover {
     background: white;
@@ -95,7 +96,7 @@ const Button = styled.button`
   }
 `;
 
-export default () => {
+const Header = () => {
   const dispatch = useDispatch();
 
   return (
@@ -121,3 +122,5 @@ export default () => {
     </Container>
   );
 };
+
+export default Header;

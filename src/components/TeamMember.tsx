@@ -101,9 +101,9 @@ const Info = styled.div`
   gap: 1rem;
 `;
 
-export default ({ name, title, link, extras, image }: any) => {
+const TeamMember = ({ name, title, link, extras, image, index }: any) => {
   return (
-    <Container>
+    <Container data-aos="fade-up" data-aos-delay={index * 300}>
       <AvatarContainer>
         <Avatar>
           <Image src={image} />
@@ -124,3 +124,5 @@ export default ({ name, title, link, extras, image }: any) => {
     </Container>
   );
 };
+
+export default TeamMember;

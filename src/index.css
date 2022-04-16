@@ -1,0 +1,19 @@
+.slide {
+  transform: scale(0.8);
+  transition: 0.5s;
+  opacity: 0.6;
+}
+
+.activeSlide {
+  transition: transform 0.5s;
+  position: relative;
+  z-index: 1000;
+  width: 200% !important;
+  transform: translateX(-25%);
+  height: 220% !important;
+}
+
+.slideWrapper {
+  display: flex;
+  justify-content: center;
+}

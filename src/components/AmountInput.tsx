@@ -106,7 +106,7 @@ const cryptoApiHeaders = {
 
 const baseUrl = "https://coinranking1.p.rapidapi.com";
 
-export default ({ label, defaultCoin = "USDT" }: any) => {
+const AmountInput = ({ label, defaultCoin = "USDT" }: any) => {
   const [value, setValue] = useState(0);
   const [open, setOpen] = useState(false);
 
@@ -129,7 +129,7 @@ export default ({ label, defaultCoin = "USDT" }: any) => {
           setValue(parseFloat((+coin?.price).toFixed(5)) || 0);
         }
       });
-  }, []);
+  }, [defaultCoin]);
 
   const ref = useRef(null);
 
@@ -174,3 +174,5 @@ export default ({ label, defaultCoin = "USDT" }: any) => {
     </Container>
   );
 };
+
+export default AmountInput;

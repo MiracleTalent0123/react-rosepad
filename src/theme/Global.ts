@@ -85,12 +85,6 @@ background: ${({ theme }) => theme.bg};
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-
-
-
   }
 
 

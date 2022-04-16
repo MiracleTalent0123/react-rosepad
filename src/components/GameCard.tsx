@@ -72,7 +72,7 @@ const Value = styled.div`
   text-transform: uppercase;
 `;
 
-export default ({
+const GameCard = ({
   id,
   title,
   category,
@@ -114,3 +114,5 @@ export default ({
     </Container>
   );
 };
+
+export default GameCard;

@@ -5,7 +5,7 @@ import NFTThumb from "components/NFTThumb";
 import { SORT_BYS } from "constants/consts";
 import { T_APE_NFTS } from "mock";
 import { useState } from "react";
-// import { useLocation } from "react-router";
+import { useLocation } from "react-router";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -77,7 +77,7 @@ const Collection = styled.div`
 `;
 
 export default () => {
-  // const path = useLocation();
+  const path = useLocation();
 
   const [sortBy, setSortBy] = useState(SORT_BYS[0]);
 

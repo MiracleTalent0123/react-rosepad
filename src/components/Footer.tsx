@@ -14,7 +14,7 @@ const Container = styled.div`
 
   @media (max-width: 1024px) {
     height: fit-content;
-  };
+  } ;
 `;
 
 const Content = styled.div`
@@ -95,7 +95,7 @@ const Link = styled.li`
   }
 `;
 
-export default () => {
+const Footer = () => {
   return (
     <Container>
       <Content>
@@ -114,12 +114,18 @@ export default () => {
           <Routes>
             <Links>
               {FOOTER_LINKS.slice(0, 4).map((e) => (
-                <Link id={e.id} key={e.id}> {e.label}</Link>
+                <Link id={e.id} key={e.id}>
+                  {" "}
+                  {e.label}
+                </Link>
               ))}
             </Links>
             <Links>
               {FOOTER_LINKS.slice(4).map((e) => (
-                <Link id={e.id} key={e.id}> {e.label}</Link>
+                <Link id={e.id} key={e.id}>
+                  {" "}
+                  {e.label}
+                </Link>
               ))}
             </Links>
           </Routes>
@@ -128,3 +134,5 @@ export default () => {
     </Container>
   );
 };
+
+export default Footer;

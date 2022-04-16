@@ -3,7 +3,7 @@ import { PROJECT_STATUS } from "constants/consts";
 import { omit } from "lodash";
 import { T_PROJECTS } from "mock";
 import styled from "styled-components";
-import rose1 from '../../assets/images/Roses/rose1.png';
+import rose1 from "../../assets/images/Roses/rose1.png";
 
 const Container = styled.div`
   width: 100%;
@@ -38,25 +38,25 @@ const Image = styled.img`
   right: 0;
   width: 70px;
   height: 70px;
-`
+`;
 
-export default () => {
+const Platforms = () => {
   return (
     <Container>
-      <Title>Innovation Platforms</Title>
+      <Title>Innovative Platform</Title>
       <Image src={rose1} />
       <Items>
-        {
-          T_PROJECTS.map((e) => ({
-            ...omit(e, ["deadline", "allocation"]),
-            status: PROJECT_STATUS.soldout,
-          }))
-            .slice(0, 5)
-            .map((i) => (
-              <ProjectCard key={i.id} {...i} />
-            ))
-        }
+        {T_PROJECTS.map((e) => ({
+          ...omit(e, ["deadline", "allocation"]),
+          status: PROJECT_STATUS.soldout,
+        }))
+          .slice(0, 5)
+          .map((i) => (
+            <ProjectCard key={i.id} {...i} />
+          ))}
       </Items>
     </Container>
   );
 };
+
+export default Platforms;

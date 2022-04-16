@@ -1,5 +1,4 @@
 import GlowContainer from "components/GlowContainer";
-// import { useEffect } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -22,12 +21,12 @@ const Body = styled.div`
   padding: 0 1.7rem;
 `;
 
-const Heading = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: space-between;
-`;
+// const Heading = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   gap: 1rem;
+//   justify-content: space-between;
+// `;
 
 const Title = styled.h1.attrs({ id: "scroller" })`
   font-family: "Nasalization";
@@ -35,16 +34,16 @@ const Title = styled.h1.attrs({ id: "scroller" })`
   line-height: 45px;
 `;
 
-const Subtitle = styled.p`
-  font-family: "Nasalization";
-  opacity: 0.36;
-`;
+// const Subtitle = styled.p`
+//   font-family: "Nasalization";
+//   opacity: 0.36;
+// `;
 
 const Description = styled.h3`
   line-height: 30px;
   font-size: 18px;
   font-weight: 100;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `;
 
 const Button = styled.button`
@@ -57,23 +56,30 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export default () => {
+const Calculator = () => {
   return (
     <Container>
       <GlowContainer>
         <Header>
-          <Title>EARLY PROJECT BACKING FRO EVERYONE</Title>
+          <div data-aos="fade-up">
+            <Title>EARLY PROJECT BACKING FRO EVERYONE</Title>
+          </div>
         </Header>
         <Body>
-          <Description>
-            The highest tier stacker of the RosePad RPAD token and liquidity
-            providers receive the highest level of benefits. This mechanism
-            combined with RoseApes NFTs and time-based staking makes our Rosepad
-            platform innovative, liquid and easily accessible to everyone.
-          </Description>
-          <Button>Read More</Button>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <Description>
+              The highest tier stacker of the RosePad RPAD token and liquidity
+              providers receive the highest level of benefits. This mechanism
+              combined with RoseApes NFTs and time-based staking makes our
+              Rosepad platform innovative, liquid and easily accessible to
+              everyone.
+            </Description>
+            <Button>Read More</Button>
+          </div>
         </Body>
       </GlowContainer>
     </Container>
   );
 };
+
+export default Calculator;

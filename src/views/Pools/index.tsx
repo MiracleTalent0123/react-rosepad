@@ -6,7 +6,7 @@ import Options from "components/Options";
 import Toggle from "components/Toggle";
 import { CHOOSE_OPTIONS, SORT_BYS, VIEW_OPTIONS } from "constants/consts";
 import { useState } from "react";
-// import { useLocation } from "react-router";
+import { useLocation } from "react-router";
 import styled from "styled-components";
 import Grid from "./Grid";
 import Table from "./Table";
@@ -56,7 +56,7 @@ const More = styled.div`
 `;
 
 export default () => {
-  // const path = useLocation();
+  const path = useLocation();
   const [isStakedOnly, setIsStakedOnly] = useState(false);
   const [sortBy, setSortBy] = useState(SORT_BYS[0]);
   const [viewOption, setViewOption] = useState(VIEW_OPTIONS[1]);

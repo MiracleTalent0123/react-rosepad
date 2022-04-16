@@ -29,8 +29,9 @@ const Img = styled.img`
   height: 100%;
   object-fit: contain;
   filter: invert(1);
-  &.upcoming, .beginning {
-    filter: none
+  &.upcoming,
+  .beginning {
+    filter: none;
   }
 `;
 
@@ -105,7 +106,7 @@ const Subtitle = styled.p`
 `;
 
 const RoadmapItem = ({ item, area }: any) => (
-  <Container style={{ gridArea: area }}>
+  <Container style={{ gridArea: area }} data-aos="fade-up">
     <Icon
       className={item.status.match(ROADMAP_MILESTONES.current) && "active-mile"}
     >

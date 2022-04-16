@@ -30,7 +30,7 @@ const Items = styled.div`
   padding: 0 3rem;
 `;
 
-export default () => {
+const Featured = () => {
   return (
     <Container>
       <Title>Featured Projects</Title>
@@ -43,3 +43,5 @@ export default () => {
     </Container>
   );
 };
+
+export default Featured;

@@ -30,16 +30,16 @@ const Title = styled.h2`
 `;
 
 const Team = () => (
-  <Container id="contact">
+  <Container id="team">
     <Title>Core Team</Title>
     <Members>
       {TEAM.map((e, i) => (
-        <TeamMember key={e.id} {...e} />
+        <TeamMember key={e.id} index={i} {...e} />
       ))}
     </Members>
     <Members>
       {ADVISORY.map((e, i) => (
-        <TeamMember key={e.id} {...e} />
+        <TeamMember key={e.id} index={i} {...e} />
       ))}
     </Members>
   </Container>

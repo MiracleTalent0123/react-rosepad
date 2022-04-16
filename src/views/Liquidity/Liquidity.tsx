@@ -32,12 +32,12 @@ const Body = styled.div`
   padding: 1.7rem;
 `;
 
-// const Inputs = styled.div`
-//   display: flex;
-//   align-items: center;
-//   flex-direction: column;
-//   gap: 0.5rem;
-// `;
+const Inputs = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+`;
 
 const Heading = styled.div`
   display: flex;

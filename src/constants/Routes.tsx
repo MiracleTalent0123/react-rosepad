@@ -1,6 +1,6 @@
 import Home from "views/Home";
 
-export default [
+const ROUTES = [
   {
     id: "home",
     label: "HOME",
@@ -10,7 +10,7 @@ export default [
   {
     id: "roadmap",
     label: "ROADMAP",
-    link: "/roadmap",
+    scrollLink: "roadmap",
   },
   // {
   //   id: "trade",
@@ -32,7 +32,7 @@ export default [
   {
     id: "team",
     label: "TEAM",
-    link: "/team",
+    scrollLink: "team",
   },
   {
     id: "fag",
@@ -45,3 +45,5 @@ export default [
     link: "/nfts",
   },
 ];
+
+export default ROUTES;

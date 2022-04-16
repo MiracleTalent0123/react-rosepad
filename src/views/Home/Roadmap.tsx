@@ -1,8 +1,8 @@
 import ROADMAP from "constants/roadmap";
 import styled from "styled-components";
 import RoadmapItem from "./MapItem";
-import rose2 from '../../assets/images/Roses/rose2.png';
-import rose4 from '../../assets/images/Roses/rose4.png';
+import rose2 from "../../assets/images/Roses/rose2.png";
+import rose4 from "../../assets/images/Roses/rose4.png";
 
 const Container = styled.div`
   width: 100%;
@@ -71,7 +71,7 @@ const Image1 = styled.img`
   height: 70px;
 `;
 
-const Roadmap = ({ scroll }: any) => {
+const Roadmap = () => {
   const areas = ROADMAP.reduce(
     (acc, _, inx) =>
       `${acc} ${inx % 2 === 0 ? `"item-${inx} ."` : `". item-${inx}"`}`,

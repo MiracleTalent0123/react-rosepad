@@ -38,7 +38,7 @@ const Option: any = styled.button`
   }
 `;
 
-export default ({
+const Choose = ({
   items = [],
   selected = items[0],
   onChange = () => null as any,
@@ -59,3 +59,4 @@ export default ({
     </Container>
   );
 };
+export default Choose;

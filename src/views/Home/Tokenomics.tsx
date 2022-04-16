@@ -41,7 +41,7 @@ const Image: any = styled.img`
   }
 `;
 
-export default () => {
+const Tokenomics = () => {
   return (
     <Container>
       <Title>Tokenomics</Title>
@@ -51,3 +51,5 @@ export default () => {
     </Container>
   );
 };
+
+export default Tokenomics;

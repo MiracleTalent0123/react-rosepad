@@ -80,7 +80,7 @@ const Container = styled.div`
   }
 `;
 
-export default ({
+const Dropdown = ({
   label = "",
   placeholder = "",
   onChange = () => null as any,
@@ -114,3 +114,5 @@ export default ({
     </Container>
   );
 };
+
+export default Dropdown;

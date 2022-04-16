@@ -1,4 +1,3 @@
-// import GradientBtn from "components/GradientBtn";
 import styled from "styled-components";
 import SOCIALS from "constants/socials";
 import Header from "../../components/Header";
@@ -100,7 +99,6 @@ const Options = styled.div`
 const Subtitle = styled.div`
   font-family: "Nasalization";
   color: white;
-  font-weight: 700;
   line-height: 1.5em;
   font-size: 25px;
   text-align: center;
@@ -170,7 +168,7 @@ const Button = styled.button`
   }
 `;
 
-export default () => {
+const Hero = () => {
   return (
     <Container>
       <Header />
@@ -208,3 +206,5 @@ export default () => {
     </Container>
   );
 };
+
+export default Hero;

@@ -53,9 +53,11 @@ const Overlay = styled.div`
     `linear-gradient(0deg,  ${theme.primary} 0%, ${theme.primary}00 100%);`};
 `;
 
-export default ({ item, styles }: any) => {
+const NFTCard = ({ item, styles }: any) => {
   return (
-    <Container styles={styles}>
+    <Container
+      styles={{ width: "18rem !important", height: "22rem !important" }}
+    >
       {item && (
         <>
           <Overlay />
@@ -71,3 +73,5 @@ export default ({ item, styles }: any) => {
     </Container>
   );
 };
+
+export default NFTCard;

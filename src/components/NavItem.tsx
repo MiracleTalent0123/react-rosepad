@@ -3,6 +3,7 @@ import useOutsideListener from "hooks/useOutsideListener";
 import { useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { Link as ScrollLink } from "react-scroll";
 
 const Container = styled.div`
   cursor: pointer;
@@ -64,7 +65,14 @@ const Caret = styled.img.attrs({ src: caretIcon })`
   }
 `;
 
-export default ({ id, label, children, link, onChange = () => null }: any) => {
+const NavItem = ({
+  id,
+  label,
+  children,
+  link,
+  onChange = () => null,
+  scrollLink,
+}: any) => {
   const [open, setOpen] = useState(false);
 
   const ref = useRef(null);
@@ -78,12 +86,18 @@ export default ({ id, label, children, link, onChange = () => null }: any) => {
   return (
     <Container>
       {!children?.length ? (
-        <Label
-          className={pathname.includes(id) ? "active" : ""}
-          onClick={() => (navigate(`${link}`), onChange())}
-        >
-          {label}
-        </Label>
+        scrollLink ? (
+          <ScrollLink activeClass="active" to={scrollLink} spy={true}>
+            <Label>{label}</Label>
+          </ScrollLink>
+        ) : (
+          <Label
+            className={pathname.includes(id) ? "active" : ""}
+            onClick={() => (navigate(`${link}`), onChange())}
+          >
+            {label}
+          </Label>
+        )
       ) : (
         <Dropdown ref={ref}>
           <Main onClick={() => setOpen(!open)}>
@@ -113,3 +127,5 @@ export default ({ id, label, children, link, onChange = () => null }: any) => {
     </Container>
   );
 };
+
+export default NavItem;

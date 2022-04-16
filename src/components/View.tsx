@@ -18,11 +18,11 @@ const Container = styled.div`
   margin: 0 auto 0 auto;
 `;
 
-export default ({ height }: any) => {
+const View = () => {
   return (
     <Container>
       <Routes>
-        <Route index element={<Home scroll={height} />} />
+        <Route index element={<Home />} />
         <Route path="/fag" element={<FAQ />}></Route>
         {/* <Route path="trade" element={<Trade />}>
           <Route path="exchange" element={<Exchange />}></Route>
@@ -39,3 +39,5 @@ export default ({ height }: any) => {
     </Container>
   );
 };
+
+export default View;
