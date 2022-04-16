@@ -32,7 +32,7 @@ const Title = styled.h2`
 
 const Connect = () => (
   <Container id="contact">
-    <Title>Flequently asked questions</Title>
+    <Title>Frequently asked questions</Title>
     <Table>
       {FAQs.map((e, i) => (
         <FAQItem key={e.id} {...e} open={i === 0} />

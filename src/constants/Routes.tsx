@@ -36,7 +36,7 @@ const ROUTES = [
   },
   {
     id: "fag",
-    label: "FAG",
+    label: "FAQ",
     link: "/fag",
   },
   {

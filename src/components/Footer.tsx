@@ -29,7 +29,9 @@ const Content = styled.div`
   padding: 1rem 0;
 
   @media (max-width: 1024px) {
-    grid-template-columns: 100%;
+    display: unset;
+    height: unset;
+    width: calc(100% - 5rem);
   }
 `;
 const Branding = styled.div`
@@ -74,9 +76,8 @@ const Column = styled.div`
 const Routes = styled.div`
   display: flex;
   gap: 1rem;
-
   @media (max-width: 1024px) {
-    display: none;
+    margin-top: 2rem;
   }
 `;
 

@@ -62,7 +62,7 @@ const Calculator = () => {
       <GlowContainer>
         <Header>
           <div data-aos="fade-up">
-            <Title>EARLY PROJECT BACKING FRO EVERYONE</Title>
+            <Title>EARLY PROJECT BACKING FOR EVERYONE</Title>
           </div>
         </Header>
         <Body>

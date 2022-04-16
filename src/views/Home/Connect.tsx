@@ -33,7 +33,7 @@ const Input = styled.input.attrs({ type: "text" })`
 const InputBox = styled.div`
   background-color: ${({ theme }) => theme.inputBG}33;
   border-radius: 5rem;
-  min-width: 27rem;
+  min-width: 20rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -27,7 +27,7 @@ const Title = styled.h2`
 const Items = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   gap: 2rem;
   grid-auto-rows: 12rem;
 `;
