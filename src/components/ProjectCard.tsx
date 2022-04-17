@@ -8,11 +8,12 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  border-bottom: 1px solid #222325;
-  -webkit-box-shadow: inset 0 0 2rem ${({ theme }) => theme.primary}80;
-  -moz-box-shadow: inset 0 0 2rem ${({ theme }) => theme.primary}80;
-  box-shadow: inset 0 0 2rem ${({ theme }) => theme.primary}80;
-  box-shadow: 0 2rem 5rem ${({ theme }) => theme.primary}50;
+  -webkit-box-shadow: inset 0 0 2rem ${({ theme }) => theme.primary}80,
+    0 1rem 3rem ${({ theme }) => theme.primary}50;
+  -moz-box-shadow: inset 0 0 2rem ${({ theme }) => theme.primary}80,
+    0 1rem 3rem ${({ theme }) => theme.primary}50;
+  box-shadow: inset 0 0 2rem ${({ theme }) => theme.primary}80,
+    0 1rem 3rem ${({ theme }) => theme.primary}50;
   border-radius: 1rem;
   backdrop-filter: blur(10px);
   cursor: pointer;

@@ -7,11 +7,13 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  border-bottom: 1px solid #222325;
-  -webkit-box-shadow: inset 0 0 2rem ${({ theme }) => theme.primary}80;
-  -moz-box-shadow: inset 0 0 2rem ${({ theme }) => theme.primary}80;
-  box-shadow: inset 0 0 2rem ${({ theme }) => theme.primary}80;
-  box-shadow: 0 2rem 5rem ${({ theme }) => theme.primary}50;
+  -webkit-box-shadow: box-shadow: inset 0 0 2rem ${({ theme }) =>
+    theme.primary}80,
+  0 2rem 5rem ${({ theme }) => theme.primary}50;
+  -moz-box-shadow: box-shadow: inset 0 0 2rem ${({ theme }) => theme.primary}80,
+  0 2rem 5rem ${({ theme }) => theme.primary}50;
+  box-shadow: inset 0 0 2rem ${({ theme }) => theme.primary}80,
+    0 2rem 5rem ${({ theme }) => theme.primary}50;
   border-radius: 1rem;
   cursor: pointer;
   background-color: black;
@@ -83,35 +85,38 @@ const GameCard = ({
   allocation,
   img,
   cover,
+  index,
 }: any) => {
   const navigate = useNavigate();
 
   return (
-    <Container onClick={() => navigate(`/projects/${id}`)}>
-      <Image src={img} />
-      <Detail>
-        <Layout>
-          <Section>
-            <Title>RAMO</Title>
-            <Subtitle>STBA</Subtitle>
-          </Section>
-          <Section>
-            <Subtitle>sales starts</Subtitle>
-            <Title>June 2022</Title>
-          </Section>
-        </Layout>
-        <Layout>
-          <List>Total Raise</List>
-          <Abbr></Abbr>
-          <Value>{raised}TBA</Value>
-        </Layout>
-        <Layout>
-          <List>People Allocation</List>
-          <Abbr></Abbr>
-          <Value>{allocation}TBA</Value>
-        </Layout>
-      </Detail>
-    </Container>
+    <div data-aos="fade-up" data-aos-delay={index * 200}>
+      <Container onClick={() => navigate(`/projects/${id}`)}>
+        <Image src={img} />
+        <Detail>
+          <Layout>
+            <Section>
+              <Title>RAMO</Title>
+              <Subtitle>STBA</Subtitle>
+            </Section>
+            <Section>
+              <Subtitle>sales starts</Subtitle>
+              <Title>June 2022</Title>
+            </Section>
+          </Layout>
+          <Layout>
+            <List>Total Raise</List>
+            <Abbr></Abbr>
+            <Value>{raised}TBA</Value>
+          </Layout>
+          <Layout>
+            <List>People Allocation</List>
+            <Abbr></Abbr>
+            <Value>{allocation}TBA</Value>
+          </Layout>
+        </Detail>
+      </Container>
+    </div>
   );
 };
 

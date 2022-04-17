@@ -35,8 +35,8 @@ const Featured = () => {
     <Container>
       <Title>Featured Projects</Title>
       <Items>
-        {T_PROJECTS.slice(0, 3).map((i) => (
-          <GameCard key={i.id} {...i} />
+        {T_PROJECTS.slice(0, 3).map((i, index) => (
+          <GameCard index={index} key={i.id} {...i} />
         ))}
       </Items>
       <GradientBtn animateOnHover>View all Projects</GradientBtn>
