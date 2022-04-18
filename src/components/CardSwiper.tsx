@@ -7,6 +7,10 @@ import Slider from "react-slick";
 
 const Container = styled.div`
   padding: 5rem 3rem 0;
+
+  @media (max-width: 1024px) {
+    padding: 5rem 1rem 0;
+  }
 `;
 
 const CardSwiper = () => {

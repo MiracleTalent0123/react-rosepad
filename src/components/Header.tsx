@@ -2,13 +2,11 @@ import brandIcon from "assets/icons/brand.svg";
 import logoIcon from "assets/icons/logo.svg";
 import menuIcon from "assets/icons/menu.svg";
 import ROUTES from "constants/Routes";
-import { useDispatch } from "react-redux";
-import { toggleNavMenu } from "store/ui";
 import styled from "styled-components";
 import IconBtn from "./IconBtn";
 import NavItem from "./NavItem";
 import RedLogo from "../assets/images/launch.png";
-import { useLocation } from "react-router-dom";
+import useNav from "hooks/useNav";
 
 const Container = styled.div`
   padding: 1rem;
@@ -46,7 +44,7 @@ const Routes = styled.div`
 `;
 
 const Options = styled.div`
-  padding: 1rem;
+  padding-bottom: 1rem;
   padding-top: 0;
   display: flex;
   align-self: flex-start;
@@ -96,8 +94,29 @@ const Button = styled.button`
   }
 `;
 
+const MobileMenu = styled.div`
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 75px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.4);
+  max-height: 0;
+  transition: 0.3s;
+  overflow: hidden;
+
+  &.active {
+    padding: 10px 0;
+    max-height: 200px;
+  }
+  button {
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+  }
+`;
+
 const Header = () => {
-  const dispatch = useDispatch();
+  const [navbarOpen, setNavbarOpen] = useNav(false);
 
   return (
     <Container>
@@ -115,8 +134,14 @@ const Header = () => {
           </Routes>
           <Button></Button>
         </span>
+        <MobileMenu className={navbarOpen ? "active" : ""}>
+          {ROUTES.map((e) => (
+            <NavItem key={e.id} {...e} />
+          ))}
+          <Button></Button>
+        </MobileMenu>
         <span>
-          <IconBtn icon={menuIcon} onClick={() => dispatch(toggleNavMenu())} />
+          <IconBtn icon={menuIcon} onClick={() => setNavbarOpen(!navbarOpen)} />
         </span>
       </Options>
     </Container>

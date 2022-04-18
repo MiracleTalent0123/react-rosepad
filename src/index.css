@@ -17,3 +17,28 @@
   display: flex;
   justify-content: center;
 }
+
+.scroll-to-top-btn {
+  align-items: center;
+  border-radius: 50% !important;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+  border-color: #f8f9fa;
+  color: #f8f9fa;
+  background-color: transparent;
+  border: 1px solid transparent;
+  background: white;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .slick-prev {
+    margin-left: 10px;
+  }
+
+  .slick-next {
+    margin-right: 10px;
+  }
+}

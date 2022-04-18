@@ -13,6 +13,10 @@ const Container = styled.div`
   margin: 3rem 0 0 0;
   padding: 5rem 0 3rem 0;
   position: relative;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 5rem;
+  }
 `;
 
 const Title = styled.h2`
@@ -29,7 +33,7 @@ const Body = styled.div`
 
   @media (max-width: 1024px) {
     grid-template-columns: 100%;
-    grid-auto-rows: 40rem;
+    grid-auto-rows: 30rem;
   }
 `;
 

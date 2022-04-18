@@ -5,8 +5,7 @@ import Header from "../../components/Header";
 const Container = styled.div`
   width: 100%;
   min-height: 20rem;
-  height: 78vh;
-  padding: 3rem 0 9rem 0;
+  padding: 0 0 7rem 0;
   background: rgb(178, 26, 240);
   background: radial-gradient(ellipse at top center, #f0931e, transparent 30%),
     radial-gradient(circle at bottom left, #ff3c60, transparent 45%),
@@ -37,9 +36,8 @@ const Content = styled.div`
   gap: 2rem;
 
   @media (max-width: 1024px) {
-    padding-top: 5rem;
+    padding-top: 2rem;
     grid-template-columns: 100%;
-    grid-auto-rows: 23rem;
     max-width: calc(100% - 2rem);
   }
 `;
@@ -87,6 +85,10 @@ const ValueBoard = styled.div`
   justify-content: center;
   align-items: center;
   padding: 15px 15px;
+
+  @media (max-width: 1024px) {
+    padding: 3rem 15px;
+  }
 `;
 
 const Options = styled.div`

@@ -79,6 +79,7 @@ const Subtitle = styled.h5`
   border-radius: 3rem;
   background-color: ${({ theme }) => theme.primary}16;
   width: fit-content;
+  font-family: "Nasalization";
 `;
 
 const Items = styled.ul`
@@ -92,6 +93,7 @@ const Items = styled.ul`
 const Item = styled.li`
   opacity: 0.72;
   padding: 0.36rem 0;
+  font-family: "Nasalization";
 `;
 
 const Info = styled.div`

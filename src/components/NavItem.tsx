@@ -72,6 +72,7 @@ const NavItem = ({
   link,
   onChange = () => null,
   scrollLink,
+  onClick,
 }: any) => {
   const [open, setOpen] = useState(false);
 
@@ -84,7 +85,7 @@ const NavItem = ({
   const navigate = useNavigate();
 
   return (
-    <Container>
+    <Container onClick={onClick}>
       {!children?.length ? (
         scrollLink ? (
           <ScrollLink activeClass="active" to={scrollLink} spy={true}>
