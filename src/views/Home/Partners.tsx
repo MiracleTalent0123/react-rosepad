@@ -27,23 +27,33 @@ const PartnerImg = styled.img`
   height: 100%;
   object-fit: contain;
   cursor: pointer;
-  filter: grayscale(100%) invert(1) brightness(100%);
-  opacity: 0.36;
+  filter: grayscale(100%) brightness(100%);
+  opacity: 0.75;
+
+  &:hover {
+    filter: unset;
+    opacity: 1;
+  }
 `;
 
 const Partner = styled.button`
   outline: none;
   border: none;
   border-radius: 100%;
-  width: 10rem;
+  width: 9rem;
   aspect-ratio: 1;
   padding: 0.86rem;
   cursor: pointer;
-  padding: 2rem;
+  padding: 1rem;
   background-color: transparent;
 
   &:hover {
-    background-color: ${({ theme }) => theme.primary}16;
+    -webkit-box-shadow: inset 0 0 1.5rem ${({ theme }) => theme.primary}80,
+      0 1rem 3rem ${({ theme }) => theme.primary}50;
+    -moz-box-shadow: inset 0 0 1.5rem ${({ theme }) => theme.primary}80,
+      0 1rem 3rem ${({ theme }) => theme.primary}50;
+    box-shadow: inset 0 0 1.5rem ${({ theme }) => theme.primary}80,
+      0 1rem 3rem ${({ theme }) => theme.primary}50;
   }
 `;
 

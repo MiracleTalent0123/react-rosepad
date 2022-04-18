@@ -47,6 +47,7 @@ const Image = styled.img`
   left: 0;
   width: 70px;
   height: 70px;
+  animation: rose 10s linear infinite;
 `;
 
 const Tiers = () => {

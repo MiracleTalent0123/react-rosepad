@@ -11,26 +11,26 @@ export default [
   {
     title: "Twitter",
     img: twitter,
-    link: "https://rosepad.io/",
+    link: "https://twitter.com/RosePadMedia",
   },
   {
     title: "Medium",
     img: medium,
-    link: "https://rosepad.io/",
+    link: "https://rosepad.medium.com/",
   },
   {
     title: "Telegram",
     img: telegram,
-    link: "https://rosepad.io/",
+    link: "http://t.me/RosePadMedia",
   },
   {
     title: "Discord",
     img: discord,
-    link: "https://rosepad.io/",
+    link: "https://discord.gg/rosepad",
   },
   {
     title: "Linked In",
     img: linkedin,
-    link: "https://rosepad.io/",
+    link: "https://www.linkedin.com/company/rosepad-io",
   },
 ].map((e) => ({ ...e, id: genID() }));

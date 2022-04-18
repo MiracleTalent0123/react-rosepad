@@ -8,11 +8,50 @@ import { random, range, round, sample } from "lodash";
 import millify from "millify";
 import moment from "moment";
 import { genID } from "utils/functions";
-import Tier1 from './assets/images/tiers/Tier1.png';
-import Tier2 from './assets/images/tiers/Tier2.png';
-import Tier3 from './assets/images/tiers/Tier3.png';
-import Tier4 from './assets/images/tiers/Tier4.png';
-import Tier5 from './assets/images/tiers/Tier5.png';
+import Tier1 from "./assets/images/tiers/Tier1.png";
+import Tier2 from "./assets/images/tiers/Tier2.png";
+import Tier3 from "./assets/images/tiers/Tier3.png";
+import Tier4 from "./assets/images/tiers/Tier4.png";
+import Tier5 from "./assets/images/tiers/Tier5.png";
+
+import Platform1 from "./assets/images/platforms/Launchpad2.png";
+import Platform2 from "./assets/images/platforms/DEX2.png";
+import Platform3 from "./assets/images/platforms/Staking2.png";
+import Platform4 from "./assets/images/platforms/Platform2.png";
+import Platform5 from "./assets/images/platforms/Artwork2.png";
+
+export const PLATFORMS = [
+  {
+    img: Platform1,
+    title: "Launchpad",
+    desc: "Advanced, inclusive and innovative tier system with multiple ways to gain access to new projects",
+    subtitle: "Tier System",
+  },
+  {
+    img: Platform2,
+    title: "DEX",
+    desc: "Intuitive DEX with constant uptime, instant finality and low gas fees (<0.01$). Cross-chain bridge",
+    subtitle: "Trading Platform",
+  },
+  {
+    img: Platform3,
+    title: "Staking",
+    desc: "Staking platform with high APY for higher returns LP farming and DeFi ecosystem",
+    subtitle: "DeFi",
+  },
+  {
+    img: Platform4,
+    title: "Launch Platform",
+    desc: "Help vested projects with fundraising, engagement, growth, advisory, liquidity and trading solutions",
+    subtitle: "Full Support",
+  },
+  {
+    img: Platform5,
+    title: "Artwork",
+    desc: "Incorporated NFTs within tier system with vaults Display artwork with upcoming marketplace",
+    subtitle: "NFTs",
+  },
+];
 
 export const T_CRYPTOS = [
   {

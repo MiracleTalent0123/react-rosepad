@@ -33,6 +33,15 @@
   cursor: pointer;
 }
 
+@keyframes rose {
+  0% {
+    transform: rotate(0deg) translate(-15px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-15px) rotate(-360deg);
+  }
+}
+
 @media (max-width: 1024px) {
   .slick-prev {
     margin-left: 10px;

@@ -58,17 +58,19 @@ const Title = styled.h2`
 const Image = styled.img`
   position: absolute;
   top: 600px;
-  left: 0;
+  left: 30px;
   width: 70px;
   height: 70px;
+  animation: rose 10s linear infinite;
 `;
 
 const Image1 = styled.img`
   position: absolute;
   top: 1000px;
-  right: 0;
+  right: 30px;
   width: 70px;
   height: 70px;
+  animation: rose 10s linear infinite;
 `;
 
 const Roadmap = () => {

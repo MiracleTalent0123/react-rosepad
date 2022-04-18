@@ -44,19 +44,27 @@ const Bubble = styled.div`
   border-radius: 1rem;
   backdrop-filter: blur(10px);
   width: 12rem;
+  display: block !important;
 
   &:nth-child(even) {
     justify-self: flex-end;
   }
+
+  &:hover,
+  &:nth-child(even):hover {
+    transform: scale(1.1);
+  }
 `;
 
 const Container = styled.div`
-  display: flex;
-  gap: 2rem;
-  transform: translateX(1.5rem);
-  flex-direction: row-reverse;
+  div {
+    display: flex;
+    gap: 2rem;
+    transform: translateX(1.5rem);
+    flex-direction: row-reverse;
+  }
 
-  &:nth-child(even) {
+  &:nth-child(even) div {
     justify-self: flex-start;
     flex-direction: row;
     transform: translateX(-1.5rem);
@@ -106,23 +114,27 @@ const Subtitle = styled.p`
 `;
 
 const RoadmapItem = ({ item, area }: any) => (
-  <Container style={{ gridArea: area }} data-aos="fade-up">
-    <Icon
-      className={item.status.match(ROADMAP_MILESTONES.current) && "active-mile"}
-    >
-      <Img src={item.icon} className={item.status} />
-    </Icon>
-    <Bubble>
-      <Title>
-        <Head>{item.time}</Head>
-        <Subtitle>{item.title}</Subtitle>
-      </Title>
-      <List>
-        {item.items.map((e: any, i: number) => (
-          <ListItem key={`map-item-${e}-${i}`}>{e}</ListItem>
-        ))}
-      </List>
-    </Bubble>
+  <Container style={{ gridArea: area }}>
+    <div data-aos="fade-up">
+      <Icon
+        className={
+          item.status.match(ROADMAP_MILESTONES.current) && "active-mile"
+        }
+      >
+        <Img src={item.icon} className={item.status} />
+      </Icon>
+      <Bubble>
+        <Title>
+          <Head>{item.time}</Head>
+          <Subtitle>{item.title}</Subtitle>
+        </Title>
+        <List>
+          {item.items.map((e: any, i: number) => (
+            <ListItem key={`map-item-${e}-${i}`}>{e}</ListItem>
+          ))}
+        </List>
+      </Bubble>
+    </div>
   </Container>
 );
 

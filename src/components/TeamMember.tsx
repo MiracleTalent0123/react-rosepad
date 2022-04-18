@@ -15,6 +15,11 @@ const Container = styled.div`
   flex-direction: column;
   gap: 1rem;
   text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const AvatarContainer = styled.div`
@@ -105,25 +110,29 @@ const Info = styled.div`
 
 const TeamMember = ({ name, title, link, extras, image, index }: any) => {
   return (
-    <Container data-aos="fade-up" data-aos-delay={index * 300}>
-      <AvatarContainer>
-        <Avatar>
-          <Image src={image} />
-        </Avatar>
-        <Linkedin onClick={() => (window.open(link, "_blank") as any).focus()}>
-          <LinkedIcon />
-        </Linkedin>
-      </AvatarContainer>
-      <Info>
-        <Name>{name}</Name>
-        <Subtitle>{title}</Subtitle>
-        <Items>
-          {extras.map((e: any) => (
-            <Item key={e}>{e}</Item>
-          ))}
-        </Items>
-      </Info>
-    </Container>
+    <div data-aos="fade-up" data-aos-delay={index * 300}>
+      <Container>
+        <AvatarContainer>
+          <Avatar>
+            <Image src={image} />
+          </Avatar>
+          <Linkedin
+            onClick={() => (window.open(link, "_blank") as any).focus()}
+          >
+            <LinkedIcon />
+          </Linkedin>
+        </AvatarContainer>
+        <Info>
+          <Name>{name}</Name>
+          <Subtitle>{title}</Subtitle>
+          <Items>
+            {extras.map((e: any) => (
+              <Item key={e}>{e}</Item>
+            ))}
+          </Items>
+        </Info>
+      </Container>
+    </div>
   );
 };
 

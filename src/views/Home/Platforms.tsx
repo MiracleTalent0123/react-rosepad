@@ -1,7 +1,5 @@
-import ProjectCard from "components/ProjectCard";
-import { PROJECT_STATUS } from "constants/consts";
-import { omit } from "lodash";
-import { T_PROJECTS } from "mock";
+import PlatformCard from "components/Platform";
+import { PLATFORMS } from "mock";
 import styled from "styled-components";
 import rose1 from "../../assets/images/Roses/rose1.png";
 
@@ -28,8 +26,12 @@ const Items = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  gap: 2rem;
-  grid-auto-rows: 12rem;
+  gap: 1.5rem;
+  grid-auto-rows: 15.5rem;
+
+  @media (max-width: 1024px) {
+    grid-auto-rows: 14rem;
+  }
 `;
 
 const Image = styled.img`
@@ -38,6 +40,7 @@ const Image = styled.img`
   right: 0;
   width: 70px;
   height: 70px;
+  animation: rose 10s linear infinite;
 `;
 
 const Platforms = () => {
@@ -46,14 +49,9 @@ const Platforms = () => {
       <Title>Innovative Platform</Title>
       <Image src={rose1} />
       <Items>
-        {T_PROJECTS.map((e) => ({
-          ...omit(e, ["deadline", "allocation"]),
-          status: PROJECT_STATUS.soldout,
-        }))
-          .slice(0, 5)
-          .map((i) => (
-            <ProjectCard key={i.id} {...i} />
-          ))}
+        {PLATFORMS.map((i, index) => (
+          <PlatformCard key={index} {...i} />
+        ))}
       </Items>
     </Container>
   );
