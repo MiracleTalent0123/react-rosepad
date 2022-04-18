@@ -3,6 +3,7 @@ import { PLATFORMS } from "mock";
 import styled from "styled-components";
 import rose1 from "../../assets/images/Roses/rose1.png";
 import Slider from "react-slick";
+import { SetStateAction, useState } from "react";
 
 const Container = styled.div`
   width: 100%;
@@ -50,6 +51,26 @@ const ItemsContainer = styled.div`
 `;
 
 const Platforms = () => {
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const templateImages = PLATFORMS.concat(PLATFORMS)
+    .concat(PLATFORMS)
+    .map((image, idx) => {
+      if (image !== null) {
+        return (
+          <div
+            className={idx === imageIndex ? "activeSlide1" : "slide"}
+            key={idx}
+          >
+            <div className="slideWrapper">
+              <PlatformCard key={idx} {...image} />
+            </div>
+          </div>
+        );
+      }
+      return null;
+    });
+
   return (
     <Container>
       <Title>Innovative Platform</Title>
@@ -67,23 +88,11 @@ const Platforms = () => {
               arrows: false,
               autoplay: true,
               speed: 1000,
+              beforeChange: (_current: any, next: SetStateAction<number>) =>
+                setImageIndex(next),
             }}
           >
-            {PLATFORMS.map((i, index) => (
-              <PlatformCard key={index} {...i} />
-            ))}
-            {PLATFORMS.map((i, index) => (
-              <PlatformCard key={index} {...i} />
-            ))}
-            {PLATFORMS.map((i, index) => (
-              <PlatformCard key={index} {...i} />
-            ))}
-            {PLATFORMS.map((i, index) => (
-              <PlatformCard key={index} {...i} />
-            ))}
-            {PLATFORMS.map((i, index) => (
-              <PlatformCard key={index} {...i} />
-            ))}
+            {templateImages}
           </Slider>
         </SliderContainer>
         <ItemsContainer>
