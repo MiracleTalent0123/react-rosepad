@@ -60,27 +60,26 @@ const FormGroup = styled.div`
 `;
 
 const Label = styled.div`
-  width: 35%;
+  width: 40%;
   text-align: center;
   position: relative;
 `;
 
 const LabelText = styled.h3`
   font-family: "Nasalization";
-  font-size: 1.5rem;
 `;
 
 const FormControl = styled.input`
   font-family: "Nasalization";
-  width: 65%;
-  height: 50px;
+  width: 60%;
+  height: 45px;
   border-radius: 0.5rem;
   border: none;
   outline: none;
   color: black;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   text-align: right;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 `;
 
 const DayInput = styled.input`
@@ -135,7 +134,7 @@ const Symbol = styled.h3`
 
 const MiddleText = styled.p`
   position: absolute;
-  top: -25px;
+  top: -30px;
 `;
 
 const CalculatorForm = () => {
@@ -161,11 +160,25 @@ const CalculatorForm = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              width: "35%",
+              width: "40%",
             }}
           >
             <MiddleText>and / or</MiddleText>
             <LabelText>Rpad-LP</LabelText>
+          </Label>
+          <FormControl value={"0"}></FormControl>
+        </FormGroup>
+        <FormGroup>
+          <Label
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              width: "40%",
+            }}
+          >
+            <MiddleText>and / or</MiddleText>
+            <LabelText>RoseApes NFT</LabelText>
           </Label>
           <FormControl value={"0"}></FormControl>
         </FormGroup>
